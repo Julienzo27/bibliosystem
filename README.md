@@ -149,11 +149,11 @@ bibliosystem/
 
 | Nombre | Rol |
 |--------|-----|
-| (completar) | Product Owner |
-| (completar) | Scrum Master |
-| (completar) | Desarrollador/a |
-| (completar) | Desarrollador/a |
-| (completar) | Desarrollador/a |
+| Jimena Obella | Product Owner |
+| Samanta Godoy | Scrum Master |
+| Jimena Obella | Desarrollador/a |
+| Samanta Godoy | Desarrollador/a |
+| Maria Rita Zumbo | Desarrollador/a |
 
 ---
 
