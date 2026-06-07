@@ -88,13 +88,22 @@ def crear_libro():
     conn = get_db()
     cursor = conn.cursor()
 
-    # HU02 - Criterio: si el libro ya existe (mismo ISBN), mostrar error
+    # HU02 - Criterio: si el libro ya existe (mismo título y autor), mostrar error
     isbn = data.get('isbn', '').strip()
     if isbn:
         cursor.execute("SELECT id FROM libros WHERE isbn = ?", (isbn,))
         if cursor.fetchone():
             conn.close()
             return jsonify({'error': 'Ya existe un libro con ese ISBN en el sistema.'}), 409
+
+    # Validación adicional: mismo título y autor
+    cursor.execute(
+        "SELECT id FROM libros WHERE LOWER(titulo) = LOWER(?) AND LOWER(autor) = LOWER(?)",
+        (data['titulo'].strip(), data['autor'].strip())
+    )
+    if cursor.fetchone():
+        conn.close()
+        return jsonify({'error': 'Ya existe un libro con ese título y autor en el catálogo.'}), 409
 
     cursor.execute(
         "INSERT INTO libros (titulo, autor, editorial, categoria, isbn, disponible) VALUES (?, ?, ?, ?, ?, 1)",
