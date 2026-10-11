@@ -1,6 +1,8 @@
-# 📚 BiblioSystem
-
 Sistema de Gestión Bibliotecaria desarrollado como Trabajo Práctico Integrador para la materia **Ingeniería de Software**.
+
+<img width="800" alt="Screenshot 2026-10-10 231051" src="https://github.com/user-attachments/assets/44fd1f3f-7288-4af6-873c-d0100b014098" />
+
+<img width="800" alt="catalogo_libros" src="https://github.com/user-attachments/assets/6264ab88-5dd3-4885-ae27-6bf1cff1d681" />
 
 ---
 
